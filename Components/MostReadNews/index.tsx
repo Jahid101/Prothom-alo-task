@@ -6,6 +6,9 @@ require("./index.less");
 
 const index = (props: any) => {
   console.log("mostRead", props.data);
+  props?.data?.items?.sort(function (a: any, b: any) {
+    return a.sort - b.sort;
+  });
 
   return (
     <div>

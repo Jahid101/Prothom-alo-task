@@ -5,7 +5,11 @@ import React from "react";
 require("./index.less");
 
 const index = (props: any) => {
-  console.log("latest", props.data);
+  console.log("latest", props.data.items);
+  props?.data?.items?.sort(function (a: any, b: any) {
+    return a.sort - b.sort;
+  });
+  // console.log("a", a);
 
   return (
     <div>
