@@ -20,6 +20,7 @@
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
       "@layout/*": ["layout/*"],
+      "@Data/*": ["Data/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config0.js", "helpers/validation.js"],
