@@ -20,7 +20,7 @@ const index = (props: any) => {
           <Divider></Divider>
         </Col>
 
-        <Col xs={24} sm={24} md={14} lg={14} xl={24} xxl={24}>
+        <Col xs={24} sm={24} md={14} lg={14} xl={24} xxl={24} className="mt-20">
           <div>
             {props?.data?.items?.map((item: any, index: any) => {
               return (
