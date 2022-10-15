@@ -26,7 +26,7 @@ const index = () => {
       <Navbar></Navbar>
       <div className="container">
         <Row>
-          <Col xs={24} sm={24} md={10} lg={10} xl={6} xxl={6}>
+          <Col xs={24} sm={24} md={10} lg={10} xl={6} xxl={6} className="colLeft">
             <Tabs
               onChange={(e) => {
                 tabsCallback(e);

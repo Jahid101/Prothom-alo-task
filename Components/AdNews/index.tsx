@@ -12,18 +12,19 @@ const index = (props: any) => {
 
   return (
     <div>
-      <Row gutter={[20, 20]}>
+      <Row gutter={[20, 20]} className="colRight">
         <Col xs={24} sm={24} md={10} lg={10} xl={24} xxl={24}>
-          <div className="titleDiv2">
-            <div className="title"> বিজ্ঞাপন</div>
+          <div className="advCol1">
+            <div className="titleDiv2">
+              <div className="title"> বিজ্ঞাপন</div>
+            </div>
+
+            <div className="advDiv">AD-1</div>
           </div>
-
-          <div className="advDiv">AD-1</div>
-
-          <Divider></Divider>
         </Col>
 
         <Col xs={24} sm={24} md={14} lg={14} xl={24} xxl={24}>
+          <Divider></Divider>
           <div>
             {props?.data?.items?.map((item: any, index: any) => {
               return (
