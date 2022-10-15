@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://orange-assessment.netlify.app/" target="blank"><img src="https://" width="320" alt="Logo" /></a>
+  <a href="https://prothomalo101.netlify.app" target="blank"><img src="https://raw.githubusercontent.com/Jahid101/Prothom-alo-task/c3ac9ba04e2ebd456f2d83b710b63e0fe4b8d95f/public/images/pAlo.svg" width="320" alt="Logo" /></a>
 </p>
 
 
 
 ## Description
 
-[Project101](https://) starter repository. To run the app have to put in the environment files in the root directory(if needed).
+[Prothom Alo](https://prothomalo101.netlify.app) starter repository. To run the app have to put in the environment files in the root directory(if needed).
 
 ## Installation
 
