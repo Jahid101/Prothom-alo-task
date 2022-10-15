@@ -16,7 +16,7 @@ const index = (props: any) => {
       {props?.data?.items?.map((item: any, index: any) => {
         return (
           <div key={index}>
-            <div className="newsId">{convertToBang(item?.id)}</div>
+            <div className="newsId">{convertToBang(index + 1)}</div>
             <div className="newsHeadLine">
               <span
                 className="primary-color cursor"

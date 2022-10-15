@@ -1,5 +1,4 @@
 import { Col, Divider, Row } from "antd";
-import { convertToBang } from "Helper/helpers";
 import router from "next/router";
 import React from "react";
 require("./index.less");

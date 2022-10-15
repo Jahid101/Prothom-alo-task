@@ -38,7 +38,7 @@ const index = (props: any) => {
                             localStorage.setItem("news", JSON.stringify(item));
                           }}
                         >
-                          {convertToBang(item?.id)}&nbsp;
+                          {convertToBang(index + 1)}&nbsp;
                           {item?.headline}
                         </span>
                         {item?.subheadline && (
