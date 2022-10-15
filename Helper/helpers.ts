@@ -47,5 +47,23 @@ export const convertToBang = (item: any) => {
   if (item == 16) {
     return "১৬";
   }
+  if (item == 17) {
+    return "১৭";
+  }
+  if (item == 18) {
+    return "১৮";
+  }
+  if (item == 19) {
+    return "১৯";
+  }
+  if (item == 20) {
+    return "২০";
+  }
+  if (item == 21) {
+    return "২১";
+  }
+  if (item == 22) {
+    return "২২";
+  }
   return item;
 };

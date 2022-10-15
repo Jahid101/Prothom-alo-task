@@ -1,3 +1,4 @@
+import AdNews from "@Components/AdNews";
 import DiscussedNews from "@Components/DiscussedNews";
 import LatestNews from "@Components/LatestNews";
 import MostReadNews from "@Components/MostReadNews";
@@ -48,15 +49,19 @@ const index = () => {
           </Col>
 
           <Col xs={24} sm={24} md={14} lg={14} xl={18} xxl={18}>
-          {/* <Col> */}
             <Row>
               <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}>
-              <SelectedNews data={data?.selected}></SelectedNews>
+                <SelectedNews data={data?.selected}></SelectedNews>
               </Col>
-              <Col xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}></Col>
+
+              <Col xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}>
+                <AdNews data={data?.selected}></AdNews>
+              </Col>
             </Row>
           </Col>
         </Row>
+
+        
       </div>
     </AppLayout>
   );
