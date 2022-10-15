@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 // CSS
@@ -10,7 +11,9 @@ const index = (props: any) => {
         id="header-menu-container3"
         className="header-menu-container3 full-width navFlex"
       >
-        <img src="/images/pAlo.svg" alt="" />
+        <Link href="/">
+          <img src="/images/pAlo.svg" className="cursor" alt="" />
+        </Link>
       </div>
     </>
   );

@@ -11,7 +11,7 @@ module.exports = {
   // },
 
   ...withAntdLess({
-    modifyVars: { "@primary-color": "#F09522" },
+    modifyVars: { "@primary-color": "#d9363e" },
     lessVarsFilePathAppendToEndOfContent: false, 
     cssLoaderOptions: {
       mode: "local",
