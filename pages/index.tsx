@@ -48,20 +48,24 @@ const index = () => {
             </Tabs>
           </Col>
 
-          <Col xs={24} sm={24} md={14} lg={14} xl={18} xxl={18}>
-            <Row>
-              <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}>
-                <SelectedNews data={data?.selected}></SelectedNews>
-              </Col>
-
-              <Col xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}>
-                <AdNews data={data?.selected}></AdNews>
-              </Col>
-            </Row>
+          <Col xs={24} sm={24} md={14} lg={14} xl={12} xxl={12}>
+            {/* <Row>  */}
+            {/* <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}> */}
+            <SelectedNews data={data?.selected}></SelectedNews>
           </Col>
+
+          <Col xs={24} sm={24} md={24} lg={24} xl={6} xxl={6}>
+            <AdNews data={data?.selected}></AdNews>
+          </Col>
+          {/* </Row>
+          </Col> */}
         </Row>
 
-        
+        <Divider></Divider>
+
+        <div className="advDivOuter">
+          <div className="advDiv2">AD-2</div>
+        </div>
       </div>
     </AppLayout>
   );
