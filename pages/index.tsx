@@ -2,9 +2,10 @@ import DiscussedNews from "@Components/DiscussedNews";
 import LatestNews from "@Components/LatestNews";
 import MostReadNews from "@Components/MostReadNews";
 import Navbar from "@Components/Navbar";
+import SelectedNews from "@Components/SelectedNews";
 import data from "@Data/data.json";
 import AppLayout from "@layout/layout";
-import { Col, Row, Tabs } from "antd";
+import { Col, Divider, Row, Tabs } from "antd";
 import { useState } from "react";
 require("./index.less");
 
@@ -46,9 +47,12 @@ const index = () => {
             </Tabs>
           </Col>
 
-          <Col xs={24} sm={24} md={14} lg={14} xl={6} xxl={6}>
+          <Col xs={24} sm={24} md={14} lg={14} xl={18} xxl={18}>
+          {/* <Col> */}
             <Row>
-              <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}></Col>
+              <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}>
+              <SelectedNews data={data?.selected}></SelectedNews>
+              </Col>
               <Col xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}></Col>
             </Row>
           </Col>
