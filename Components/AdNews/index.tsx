@@ -12,7 +12,7 @@ const index = (props: any) => {
 
   return (
     <div>
-      <Row>
+      <Row gutter={[20, 20]}>
         <Col xs={24} sm={24} md={10} lg={10} xl={24} xxl={24}>
           <div className="titleDiv2">
             <div className="title"> বিজ্ঞাপন</div>
@@ -23,27 +23,17 @@ const index = (props: any) => {
           <Divider></Divider>
         </Col>
 
-        <Col xs={24} sm={24} md={14} lg={14} xl={24} xxl={24} className="mt-20">
+        <Col xs={24} sm={24} md={14} lg={14} xl={24} xxl={24}>
           <div>
             {props?.data?.items?.map((item: any, index: any) => {
               return (
                 <div className="flex">
-                  <Row>
-                    <Col span={14}>
-                      <div className="newsAdHeadLine mb-5">
-                        <span
-                          className="primary-color cursor"
-                          onClick={() => {
-                            router.push(`/news/${item.id}`);
-                            localStorage.setItem("news", JSON.stringify(item));
-                          }}
-                        >
-                          {convertToBang(index + 1)}&nbsp;
-                          {item?.headline}
-                        </span>
-                        {item?.subheadline && (
+                  {index > 2 && (
+                    <Row>
+                      <Col span={14}>
+                        <div className="newsAdHeadLine mb-5">
                           <span
-                            className="cursor"
+                            className="primary-color cursor"
                             onClick={() => {
                               router.push(`/news/${item.id}`);
                               localStorage.setItem(
@@ -52,29 +42,47 @@ const index = (props: any) => {
                               );
                             }}
                           >
-                            &nbsp;/ {item?.subheadline}
+                            {convertToBang(index + 1)}&nbsp;
+                            {item?.headline}
                           </span>
-                        )}
-                      </div>
-                    </Col>
+                          {item?.subheadline && (
+                            <span
+                              className="cursor"
+                              onClick={() => {
+                                router.push(`/news/${item.id}`);
+                                localStorage.setItem(
+                                  "news",
+                                  JSON.stringify(item)
+                                );
+                              }}
+                            >
+                              &nbsp;/ {item?.subheadline}
+                            </span>
+                          )}
+                        </div>
+                      </Col>
 
-                    <Col span={10}>
-                      <div>
-                        <img
-                          onClick={() => {
-                            router.push(`/news/${item.id}`);
-                            localStorage.setItem("news", JSON.stringify(item));
-                          }}
-                          src={item.thumb}
-                          className="adNewsImg"
-                          alt=""
-                        />
-                      </div>
-                    </Col>
-                    {props?.data?.items?.length - 1 != index && (
-                      <Divider></Divider>
-                    )}
-                  </Row>
+                      <Col span={10}>
+                        <div>
+                          <img
+                            onClick={() => {
+                              router.push(`/news/${item.id}`);
+                              localStorage.setItem(
+                                "news",
+                                JSON.stringify(item)
+                              );
+                            }}
+                            src={item.thumb}
+                            className="adNewsImg"
+                            alt=""
+                          />
+                        </div>
+                      </Col>
+                      {props?.data?.items?.length - 1 != index && (
+                        <Divider></Divider>
+                      )}
+                    </Row>
+                  )}
                 </div>
               );
             })}
