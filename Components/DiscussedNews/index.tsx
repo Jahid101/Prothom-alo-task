@@ -6,6 +6,9 @@ require("./index.less");
 
 const index = (props: any) => {
   console.log("discussed", props.data);
+  props?.data?.items?.sort(function (a: any, b: any) {
+    return a.sort - b.sort;
+  });
 
   return (
     <div>
@@ -13,7 +16,7 @@ const index = (props: any) => {
       {props?.data?.items?.map((item: any, index: any) => {
         return (
           <div key={index}>
-            <div className="newsId">{convertToBang(item?.id)}</div>
+            <div className="newsId">{convertToBang(index + 1)}</div>
             <div className="newsHeadLine">
               <span
                 className="primary-color cursor"
