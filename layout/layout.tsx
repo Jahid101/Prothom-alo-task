@@ -1,17 +1,17 @@
 import { Layout } from "antd";
 import Head from "next/head";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import React from "react";
 const { Content } = Layout;
 
 const AppLayout = ({ children }: any) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <React.Fragment>
       <Head>
-        <title>Funshion</title>
-        <meta name="description" content="Funshion" />
+        <title>প্রথম আলো | বাংলা নিউজ পেপার</title>
+        <meta name="description" content="প্রথম আলো | বাংলা নিউজ পেপার" />
 
         {/* For not auto zoom in mobile devices */}
         <meta
@@ -35,7 +35,6 @@ const AppLayout = ({ children }: any) => {
         <meta name="keywords" content=""></meta>
 
         <meta name="msvalidate.01" content="69226226970AB66BA8B8B92B7127D2A3" />
-
       </Head>
 
       <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -45,13 +44,12 @@ const AppLayout = ({ children }: any) => {
       {/* Inter font */}
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet"
+      />
 
       <Content>{children}</Content>
-
     </React.Fragment>
   );
-}
-
+};
 
 export default AppLayout;
