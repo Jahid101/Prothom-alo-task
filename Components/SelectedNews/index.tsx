@@ -9,7 +9,10 @@ const index = (props: any) => {
 
   return (
     <div>
-      <div></div>
+      <div className="flex titleDiv">
+        <div className="blueDot"></div>
+        <div className="title"> নির্বাচিত</div>
+      </div>
 
       <div>
         <Row>
