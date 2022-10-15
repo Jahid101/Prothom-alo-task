@@ -1,17 +1,59 @@
+import DiscussedNews from "@Components/DiscussedNews";
+import LatestNews from "@Components/LatestNews";
+import MostReadNews from "@Components/MostReadNews";
 import Navbar from "@Components/Navbar";
 import data from "@Data/data.json";
 import AppLayout from "@layout/layout";
+import { Col, Row, Tabs } from "antd";
 import { useState } from "react";
 require("./index.less");
 
+const { TabPane } = Tabs;
+
 const index = () => {
-  const [visible, setVisible] = useState(false);
+  const [key, setKey] = useState("latest");
+
+  const tabsCallback = (key: any) => {
+    setKey(key);
+  };
 
   console.log(data);
 
   return (
     <AppLayout>
       <Navbar></Navbar>
+      <div className="container">
+        <Row>
+          <Col xs={24} sm={24} md={10} lg={10} xl={6} xxl={6}>
+            <Tabs
+              onChange={(e) => {
+                tabsCallback(e);
+              }}
+              activeKey={key}
+              centered
+            >
+              <TabPane tab={`সর্বশেষ`} key="latest">
+                <LatestNews data={data?.latest}></LatestNews>
+              </TabPane>
+
+              <TabPane tab={`পঠিত`} key="mostread">
+                <MostReadNews data={data?.mostread}></MostReadNews>
+              </TabPane>
+
+              <TabPane tab={`আলোচিত`} key="discussed">
+                <DiscussedNews data={data?.discussed}></DiscussedNews>
+              </TabPane>
+            </Tabs>
+          </Col>
+
+          <Col xs={24} sm={24} md={14} lg={14} xl={6} xxl={6}>
+            <Row>
+              <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}></Col>
+              <Col xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}></Col>
+            </Row>
+          </Col>
+        </Row>
+      </div>
     </AppLayout>
   );
 };
