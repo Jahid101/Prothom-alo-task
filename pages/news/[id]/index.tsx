@@ -19,7 +19,7 @@ const index = () => {
     setData(JSON.parse(data));
   }, [router.isReady]);
 
-  if (typeof window !== "undefined") {
+  if (window) {
     //@ts-ignore
     document.getElementById("details")?.innerHTML += data?.descriptions;
   }
