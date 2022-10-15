@@ -19,9 +19,16 @@ const index = () => {
     setData(JSON.parse(data));
   }, [router.isReady]);
 
-  if (window) {
+  // if (typeof window !== undefined) {
+  //   //@ts-ignore
+  //   // document.getElementById("details").innerHTML += data?.descriptions;
+  // }
+
+  try {
     //@ts-ignore
-    document.getElementById("details")?.innerHTML += data?.descriptions;
+    document.getElementById("details").innerHTML += data?.descriptions;
+  } catch (e) {
+    console.log(e);
   }
 
   if (!router.isReady) {
