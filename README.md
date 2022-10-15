@@ -38,7 +38,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Author - [Md Jahid Hasan Anik](https://jahid101.github.io)
 
 
-# My-repo-101
-"# project101" 
-# fashion-E
-# Prothom-alo-task
