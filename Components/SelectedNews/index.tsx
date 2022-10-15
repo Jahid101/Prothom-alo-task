@@ -36,9 +36,9 @@ const index = (props: any) => {
                       />
                     </div>
 
-                    <div className="newsSelectHeadLine mb-5">
+                    <div className="newsSelectHeadLine1 mb-5 changPosition">
                       <span
-                        className="primary-color cursor"
+                        className="cursor"
                         onClick={() => {
                           router.push(`/news/${item.id}`);
                           localStorage.setItem("news", JSON.stringify(item));
@@ -46,18 +46,17 @@ const index = (props: any) => {
                       >
                         {convertToBang(index + 1)}&nbsp;
                         {item?.headline}
+                        {item?.subheadline && <span>&nbsp;/ &nbsp;</span>}
                       </span>
-                      {item?.subheadline && (
-                        <span
-                          className="cursor"
-                          onClick={() => {
-                            router.push(`/news/${item.id}`);
-                            localStorage.setItem("news", JSON.stringify(item));
-                          }}
-                        >
-                          &nbsp;/ {item?.subheadline}
-                        </span>
-                      )}
+                      <span
+                        className="cursor"
+                        onClick={() => {
+                          router.push(`/news/${item.id}`);
+                          localStorage.setItem("news", JSON.stringify(item));
+                        }}
+                      >
+                        {item?.subheadline}
+                      </span>
                     </div>
                   </Col>
                 )}
